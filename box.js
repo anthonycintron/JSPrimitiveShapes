@@ -1,6 +1,6 @@
 /**
  * Square
- * Simple primitive Shape object which can draw a square.
+ * Simple primitive Shape object which can draw a Box.
  * 
  * Created by Anthony Cintron - anthony.cintron@gmail.com
  */

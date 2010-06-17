@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Square using canvas</title>
+	<title>Box using canvas</title>
 
 	<script type="text/javascript" charset="utf-8" src='box.js'>
 	</script>
@@ -11,7 +11,7 @@
 	<script type="text/javascript" charset="utf-8">
 		var init = function (args) 
 		{
-			var rect = new Box("square",200,100,"#F4C8FF", "#BB6891");
+			var rect = new Box("rect",200,100,"#F4C8FF", "#BB6891");
 			rect.draw();
 			rect.setX(100);
 			rect.setY(100);
@@ -20,7 +20,7 @@
 
 </head>
 <body onload='init();' >
-	<canvas id="square"></canvas>
+	<canvas id="rect"></canvas>
 </body>
 
 </html>
