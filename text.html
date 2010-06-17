@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Square using canvas</title>
+
+	<script type="text/javascript" charset="utf-8" src='box.js'>
+	</script>
+	
+	<script type="text/javascript" charset="utf-8">
+		var init = function (args) 
+		{
+			var rect = new Box("square",200,100,"#F4C8FF", "#BB6891");
+			rect.draw();
+			rect.setX(100);
+			rect.setY(100);
+		}
+	</script>
+
+</head>
+<body onload='init();' >
+	<canvas id="square"></canvas>
+</body>
+
+</html>
