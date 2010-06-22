@@ -5,30 +5,42 @@
  * Created by Anthony Cintron - anthony.cintron@gmail.com
  */
 function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
- {
-    var canvas = document.getElementById(objID);
-
+{
     // properties
+		this.canvas = document.getElementById(objID);
     this.width = width;
     this.height = height;
     this.fillColor = fillColor;
     this.strokeColor = strokeColor;
     this.strokeWeight = (strokeWeight == undefined) ? 5: strokeWeight;
-
-
+		
+	 /**
+	 	* PRIVATE METHODS
+	 	*/
+		var privateMethods = 
+		{
+			init: function (parent)
+			{
+				parent.canvas.style.position = "absolute";
+				parent.canvas.setAttribute('width', width);
+		    parent.canvas.setAttribute('height', height);
+			}
+		}
+		
+		privateMethods.init(this);
+		
     // init
-    canvas.style.position = "absolute";
-    canvas.setAttribute('width', width);
-    canvas.setAttribute('height', height);
+    //canvas.style.position = "absolute";
+    
 
     /**
 	 * PUBLIC METHODS
 	 */
     this.draw = function()
     {
-        if (canvas.getContext)
+        if (this.canvas.getContext)
         {
-            var ctx = canvas.getContext('2d');
+            var ctx = this.canvas.getContext('2d');
             ctx.fillStyle = fillColor;
             ctx.fillRect(0, 0, this.width, this.height);
             ctx.save();
@@ -47,27 +59,23 @@ function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
 	 */
     this.getX = function()
     {
-        return canvas.style.left;
+        return this.canvas.style.left;
     }
 
     this.setX = function(value)
     {
-        canvas.style.left = value + 'px';
+        this.canvas.style.left = value + 'px';
     }
 
     this.getY = function()
     {
-        return canvas.style.top;
+        return this.canvas.style.top;
     }
 
     this.setY = function(value)
     {
-        canvas.style.top = value + 'px';
+        this.canvas.style.top = value + 'px';
     }
-
-    /**
-	 * PRIVATE METHODS
-	 */
 
 }
 
