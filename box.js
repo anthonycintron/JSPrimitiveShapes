@@ -6,7 +6,9 @@
  */
 function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
 {
-    // properties
+		/**
+		 * PUBLIC PROPERTIES
+		 */
 		this.canvas = document.getElementById(objID);
     this.width = width;
     this.height = height;
@@ -17,7 +19,7 @@ function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
 	 /**
 	 	* PRIVATE METHODS
 	 	*/
-		var privateMethods = 
+		var private = 
 		{
 			init: function (parent)
 			{
@@ -27,15 +29,12 @@ function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
 			}
 		}
 		
-		privateMethods.init(this);
-		
-    // init
-    //canvas.style.position = "absolute";
-    
+		// init
+		private.init(this);
 
     /**
-	 * PUBLIC METHODS
-	 */
+	 	 * PUBLIC METHODS
+	 	 */
     this.draw = function()
     {
         if (this.canvas.getContext)
