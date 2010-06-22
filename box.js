@@ -19,18 +19,15 @@ function Box(objID, width, height, fillColor, strokeColor, strokeWeight)
 	 /**
 	 	* PRIVATE METHODS
 	 	*/
-		var private = 
+		function init (parent)
 		{
-			init: function (parent)
-			{
-				parent.canvas.style.position = "absolute";
-				parent.canvas.setAttribute('width', width);
-		    parent.canvas.setAttribute('height', height);
-			}
+			parent.canvas.style.position = "absolute";
+			parent.canvas.setAttribute('width', width);
+	    parent.canvas.setAttribute('height', height);
 		}
 		
 		// init
-		private.init(this);
+		init(this);
 
     /**
 	 	 * PUBLIC METHODS
